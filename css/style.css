@@ -1,0 +1,280 @@
+/***********************************************/
+/***************** Sidelayout ******************/
+h1 {
+    font-size: 25px;
+    color: white;
+    background-color: #454545;
+    width: 100%;
+    margin: 0;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: opensans, sans-serif
+}
+
+main {
+    flex: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #454545;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;;
+}
+
+#logoFooter {
+    width: 20%;
+}
+#logoFooter img{
+    width: 100%;
+    
+}
+/***********************************************/
+/***************** mobil nav *******************/
+
+/*Jeg bruger flex til at bestemme retningen for min navbar og centerer den derefter*/
+#menu {
+    /* placering af menu (Gør så vi kan placere navbaren i forhold til browser)*/
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    background-color: #454545;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* vi løfter menuen over andet content*/
+    z-index: 5;
+    /* menubaren animeres ind*/
+    transition: left 0.3s linear;
+}
+
+/*Denne style bliver brugt når der er #menu i url'en. Det bruger vi til at vise navbaren, når vi trykker på "åben navbar" ikonet*/
+#menu:target {
+    left: 0;
+}
+
+
+#menuPunkter {
+    /*Punkterne fjernes fra listen*/
+    list-style: none;
+    padding: 0;
+    margin-top: 120px;
+    color: #f2cbd9;
+    text-decoration: none;
+    /*Flex bruges til at ligge links under hinanden og centere dem*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Menupunkter adskilles lidt*/
+#menuPunkter a {
+    font-size: 20px;
+    font-family: "opensans", serif;
+    display: block;
+    margin: 10px;
+    padding: 20px;
+    /*Jeg fjerner stregen og ændre farven*/
+    color: white;
+    text-decoration: none;
+    text-shadow: 0px 1px 6px #0000001d;
+}
+
+/***********************************************/
+/************ mobil nav knapper ****************/
+
+#closeNav,
+#openNav {
+    /*Gør så vi kan placere krydset i navbaren som vi vil*/
+    position: absolute;
+    top: 40px;
+    text-decoration: none;
+    font-size: 40px;
+    color: black;
+}
+
+/*knapper til åben og luk af navbar*/
+#closeNav {
+    right: 10px;
+    top: 10px;
+    color: white;
+}
+
+#openNav {
+    left: 10px;
+    top: 10px;
+    color: white;
+}
+
+/***********************************************/
+/************ mobil nav logo *******************/
+
+/*logoet i navbaren*/
+#logo {
+    width: 60%;
+    display: block;
+}
+
+/*Giver logoet 100% af forældrens 60%*/
+#logo img {
+    width: 100%;
+}
+
+#navtop {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+#navtopImage {
+    width: 100%;
+}
+
+#logoTop {
+    width: 60%;
+    margin-top: 30px;
+}
+
+/***********************************************/
+/*************** mobil topbar ******************/
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    
+}
+
+
+#headerText {
+    /* Vi bruger absolute placering til at lægge boksen oven på vores header */
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(224, 224, 224, 0.6);
+    padding: 50px 20px;
+    margin: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/*Tilpasning af logo i toppen på mobil*/
+
+
+#logoTop img,
+#logoTopDesktop img {
+    width: 100%;
+}
+
+#menuPunkter #logoTopDesktop {
+    display: none;
+}
+
+/*Jeg styler mit bülow logo som ligger i bunden af navbaren*/
+#lblogo {
+    display: flex;
+    justify-content: center;
+}
+
+#lblogo img {
+    width: 25%;
+    margin-top: 180px;
+}
+
+/***********************************************/
+/************* mobil landingpage ***************/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EFEDED;
+}
+
+main p {
+    width: 85%;
+    text-align: center;
+}
+
+.picturesLanding {
+    width: 90%;
+}
+
+/*Herunder styles konkurrenceboxen på landingpage*/
+#konkurrenceBox {
+    background-color: #454545;
+    color: white;
+    /* vi bruger display flex til at bestemme retningen af indholdet og til at centere det i boksen*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    padding: 10px;
+    margin: 30px;       
+}
+
+#konkurrenceBox p {
+    width: auto;
+}
+
+#konkurrenceLink {
+    text-decoration: none;
+    color: white;
+}
+    
+/***********************************************/
+/************* mobil - Konkurrence *************/
+
+#fotoKonkurrence {
+    width: 85%
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin-top: 40px;
+}
+
+#contactButton {
+    background-color: rgba(188, 206, 216, 0.7);
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
