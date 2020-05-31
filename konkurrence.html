@@ -45,6 +45,9 @@
                 </a>
             </nav>
             <img id="navtopImage" src="images/Mobileheadshort.jpg" />
+            <img id="navtopImage2" src="images/Tabletheadshort.jpg" />
+            <img id="navtopImage3" src="images/HeaderDesktopShort.jpg" />
+            <h3 id="logoText">by Bülow</h3>
             <div id="navtop">
                 <a id="logoTop" href="/">
                     <img src="/images/Logo.png" alt="Bærries by bülow Logo" />
@@ -54,7 +57,7 @@
                 </a>
             </div>
         </header>
-        <main>
+        <main id="mainKonkurrence">
             <h1>KONKURRENCE</h1>
             <h2>
                 Vær med når vi kårer sommerens bedste Bærries by Bülow moment!
@@ -63,31 +66,43 @@
                 Del dit bedste moment med os og deltag i konkurrencen om en
                 rundvisning hos Bülow Lakrids og en lækker sommergaveæske
             </p>
-            <img
-                id="fotoKonkurrence"
-                src="/images/Konkurrence.JPG"
-                alt="Bærries by bülow, lakrids, strand, dansk sommer. "
-            />
+            <div id="konkurrenceIndhold">
+                <img
+                    id="fotoKonkurrence"
+                    src="/images/Konkurrence.JPG"
+                    alt="Bærries by bülow, lakrids, strand, dansk sommer. "
+                />
 
-            <form id="form">
-                <input type="text" name="Navn" placeholder="Navn:" />
+                <form id="form">
+                    <div id="formFields">
+                        <input type="text" name="Navn" placeholder="Navn:" />
 
-                <input type="text" name="E-mail" placeholder="E-mail:" />
+                        <input
+                            type="text"
+                            name="E-mail"
+                            placeholder="E-mail:"
+                        />
 
-                <textarea name="Emne" placeholder="Beskrivelse:"></textarea>
-
-                <div id="pictureUpload">
-                    <div id="pictureIkon">
-                        <i class="material-icons">
-                            camera_alt
-                        </i>
+                        <textarea
+                            name="Emne"
+                            placeholder="Beskrivelse:"
+                        ></textarea>
                     </div>
+                    <div id="formFields">
+                        <div id="pictureUpload">
+                            <div id="pictureIkon">
+                                <i class="material-icons">
+                                    camera_alt
+                                </i>
+                            </div>
 
-                    <button type="button">Vælg billede</button>
-                </div>
+                            <button type="button">Vælg billede</button>
+                        </div>
 
-                <button id="contactButton" type="submit">Deltag</button>
-            </form>
+                        <button id="deltagButton" type="submit">Deltag</button>
+                    </div>
+                </form>
+            </div>
         </main>
         <footer>
             <div id="footerText">

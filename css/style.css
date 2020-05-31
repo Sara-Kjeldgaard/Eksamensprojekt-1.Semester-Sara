@@ -25,6 +25,7 @@ body {
     flex-direction: column;
     margin: 0;
     font-family: opensans, sans-serif;
+    background-color: #efeded;
 }
 
 main {
@@ -42,6 +43,10 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
+}
+
+button {
+    font-family: opensans, sans-serif;
 }
 
 #logoFooter {
@@ -138,6 +143,10 @@ footer {
     display: block;
 }
 
+#logoText {
+    display: none;
+}
+
 /*Giver logoet 100% af forældrens 60%*/
 #logo img {
     width: 100%;
@@ -153,6 +162,11 @@ footer {
 #navtopImage {
     width: 100%;
 }
+#navtopImage2,
+#navtopImage3 {
+    width: 100%;
+    display: none;
+}
 
 #logoTop {
     width: 60%;
@@ -167,8 +181,6 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: white;
-    background-position: center;
-    background-size: cover;
     width: 100%;
     position: relative;
 }
@@ -205,11 +217,12 @@ header {
 #lblogo {
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 30px;
 }
 
 #lblogo img {
     width: 25%;
-    margin-top: 180px;
 }
 
 /***********************************************/
@@ -219,16 +232,23 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #efeded;
 }
 
 main p {
     width: 85%;
     text-align: center;
+    margin: 20px 0;
+}
+
+.product {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .picturesLanding {
-    width: 90%;
+    width: 100%;
 }
 
 /*Herunder styles konkurrenceboxen på landingpage*/
@@ -246,6 +266,7 @@ main p {
 
 #konkurrenceBox p {
     width: auto;
+    margin: 8px;
 }
 
 #konkurrenceLink {
@@ -272,10 +293,20 @@ main p {
     background-color: #ee855c;
 }
 
+.ingredient-image.desktop {
+    display: none;
+}
+
 /***********************************************/
 /************* mobil - Konkurrence *************/
 
 #fotoKonkurrence {
+    width: 100%;
+}
+
+#konkurrenceIndhold {
+    display: flex;
+    flex-direction: column;
     width: 85%;
 }
 
@@ -283,8 +314,15 @@ main p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 85%;
+    width: 100%;
     margin: 40px 0px;
+}
+
+#formFields {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 input,
@@ -301,13 +339,222 @@ textarea {
     min-height: 200px;
 }
 
-#contactButton {
+#pictureUpload {
+    width: 100%;
+    margin: 20px 0;
+}
+
+#pictureIkon {
+    background-color: #585858;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+}
+#pictureIkon i {
+    font-size: 80px;
+}
+
+#pictureUpload button {
+    width: 100%;
+    background-color: #7b6dbf;
+    color: white;
+    padding: 15px;
+    border: none;
+}
+
+#deltagButton {
     background-color: #454545;
     color: white;
-    padding: 12px 20px;
+    padding: 15px 55px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin: 10px;
     box-shadow: 0px 1px 25px #0000008b;
+    width: 50%;
+}
+
+/***********************************************/
+/********* mediaquery til tablet ***************/
+
+@media only screen and (min-width: 700px) {
+    #closeNav,
+    #openNav {
+        margin: 40px;
+    }
+
+    #logo {
+        width: 40%;
+        margin-top: 100px;
+    }
+
+    #lblogo {
+        width: 40%;
+    }
+
+    #navtopImage #navtopImage3 {
+        display: none;
+    }
+    #navtopImage2 {
+        width: 100%;
+        display: block;
+    }
+
+    #logoTop {
+        width: 40%;
+        margin-top: 30px;
+    }
+    #headerText {
+        width: 40%;
+        left: 30%;
+        margin-left: 0;
+    }
+
+    main {
+        width: 60%;
+        margin-bottom: 20px;
+        margin-left: 20%;
+    }
+    #konkurrenceBox {
+        width: 120%;
+        margin-bottom: 60px;
+    }
+
+    h1 {
+        width: 100vw;
+    }
+
+    h2 {
+        width: 80vw;
+        font-size: 18px;
+    }
+}
+
+/***********************************************/
+/********* mediaquery til web ******************/
+
+@media only screen and (min-width: 1200px) {
+    /*Vi tilpasser naven til tablet*/
+    #closeNav,
+    #openNav,
+    #navtop,
+    #lblogo {
+        /*Disse funktioner vil vi ikke vise*/
+        display: none;
+    }
+
+    #navtopImage,
+    #navtopImage2 {
+        display: none;
+    }
+    #navtopImage3 {
+        width: 100%;
+        display: block;
+    }
+
+    #menu {
+        position: absolute;
+        left: 0;
+        padding: 0;
+        height: 50px;
+        background-color: transparent;
+        flex-direction: row;
+    }
+
+    #logo {
+        margin-left: 50px;
+        width: 200px;
+    }
+
+    #logoText {
+        display: block;
+        position: absolute;
+        left: 200px;
+        top: 75px;
+        font-size: 22px;
+        color: white;
+    }
+
+    #headerText {
+        bottom: 30%;
+    }
+
+    #menuPunkter {
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: 50px;
+    }
+    #menuPunkter a {
+        font-size: 16px;
+    }
+
+    .product {
+        flex-direction: row;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .product p {
+        margin: 0 60px;
+    }
+
+    /* her sørge vi for at hver andet produkt vender om ved at bruge flex order til at skubbe billedet */
+    .product.flip .picturesLanding {
+        order: 2;
+    }
+
+    .picturesLanding {
+        width: 50%;
+    }
+
+    footer {
+        padding: 20px 50px 40px 50px;
+        margin-top: 60px;
+    }
+
+    #logoFooter {
+        margin-top: 30px;
+        width: 60px;
+    }
+
+    #mainKonkurrence {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    #konkurrenceIndhold {
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    #fotoKonkurrence {
+        width: 45%;
+    }
+
+    #form {
+        width: 45%;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-top: 0;
+    }
+
+    #formFields {
+        justify-content: flex-start;
+        margin-left: 30px;
+    }
+
+    #deltagButton {
+        margin-top: 60px;
+        width: 100%;
+    }
+    .ingredient-image {
+        display: none;
+    }
+    .ingredient-image.desktop {
+        display: block;
+    }
 }
