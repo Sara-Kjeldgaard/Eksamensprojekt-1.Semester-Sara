@@ -69,19 +69,22 @@
                 alt="Bærries by bülow, lakrids, strand, dansk sommer. "
             />
 
-            <form action="action_page.php" id="form">
-                <label for="Navn"></label>
-                <input type="text" id="Navn" placeholder="Navn:" />
+            <form id="form">
+                <input type="text" name="Navn" placeholder="Navn:" />
 
-                <label for="E-mail"></label>
-                <input type="text" id="E-mail" placeholder="E-mail:" />
+                <input type="text" name="E-mail" placeholder="E-mail:" />
 
-                <label for="Beskrivelse"></label>
-                <textarea
-                    id="Emne"
-                    placeholder="Beskrivelse:"
-                    style="height:200px"
-                ></textarea>
+                <textarea name="Emne" placeholder="Beskrivelse:"></textarea>
+
+                <div id="pictureUpload">
+                    <div id="pictureIkon">
+                        <i class="material-icons">
+                            camera_alt
+                        </i>
+                    </div>
+
+                    <button type="button">Vælg billede</button>
+                </div>
 
                 <button id="contactButton" type="submit">Deltag</button>
             </form>

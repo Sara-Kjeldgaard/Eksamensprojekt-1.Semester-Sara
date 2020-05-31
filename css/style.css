@@ -9,7 +9,10 @@ h1 {
     padding: 24px;
     display: flex;
     justify-content: center;
-    
+}
+
+h2 {
+    text-align: center;
 }
 
 html {
@@ -21,7 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    font-family: opensans, sans-serif
+    font-family: opensans, sans-serif;
 }
 
 main {
@@ -38,15 +41,14 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;;
+    padding: 10px 30px;
 }
 
 #logoFooter {
     width: 20%;
 }
-#logoFooter img{
+#logoFooter img {
     width: 100%;
-    
 }
 /***********************************************/
 /***************** mobil nav *******************/
@@ -74,7 +76,6 @@ footer {
 #menu:target {
     left: 0;
 }
-
 
 #menuPunkter {
     /*Punkterne fjernes fra listen*/
@@ -170,9 +171,7 @@ header {
     background-size: cover;
     width: 100%;
     position: relative;
-    
 }
-
 
 #headerText {
     /* Vi bruger absolute placering til at lægge boksen oven på vores header */
@@ -192,7 +191,6 @@ header {
 }
 
 /*Tilpasning af logo i toppen på mobil*/
-
 
 #logoTop img,
 #logoTopDesktop img {
@@ -221,7 +219,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #EFEDED;
+    background-color: #efeded;
 }
 
 main p {
@@ -243,7 +241,7 @@ main p {
     align-items: center;
     width: 85%;
     padding: 10px;
-    margin: 30px;       
+    margin: 30px;
 }
 
 #konkurrenceBox p {
@@ -254,27 +252,62 @@ main p {
     text-decoration: none;
     color: white;
 }
-    
+
+/***********************************************/
+/************* mobil produtsider ***************/
+
+#ingrediensLabel,
+#ingrediensLabel2 {
+    color: white;
+    padding: 5px 85px;
+    font-size: 18px;
+    margin: 20px;
+}
+
+#ingrediensLabel {
+    background-color: #7b6dbf;
+}
+
+#ingrediensLabel2 {
+    background-color: #ee855c;
+}
+
 /***********************************************/
 /************* mobil - Konkurrence *************/
 
 #fotoKonkurrence {
-    width: 85%
+    width: 85%;
 }
 
 #form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;
-    margin-top: 40px;
+    width: 85%;
+    margin: 40px 0px;
+}
+
+input,
+textarea {
+    background-color: transparent;
+    border: 1px solid #454545;
+    padding: 12px;
+    margin: 18px 0;
+    width: 100%;
+    font-family: opensans, sans-serif;
+}
+
+textarea {
+    min-height: 200px;
 }
 
 #contactButton {
-    background-color: rgba(188, 206, 216, 0.7);
-    color: black;
+    background-color: #454545;
+    color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 3px;
     cursor: pointer;
     margin-bottom: 10px;
+    box-shadow: 0px 1px 25px #0000008b;
+}
