@@ -392,7 +392,7 @@ textarea {
         width: 40%;
     }
 
-    #navtopImage #navtopImage3 {
+    #navtopImage, #navtopImage3 {
         display: none;
     }
     #navtopImage2 {
