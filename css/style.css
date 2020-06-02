@@ -1,5 +1,7 @@
 /***********************************************/
 /***************** Sidelayout ******************/
+
+/* h1 bliver kun brugt til vores grå bokse, derfor styler vi dem alle samlet */
 h1 {
     font-size: 25px;
     color: white;
@@ -15,15 +17,32 @@ h2 {
     text-align: center;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main p {
+    width: 85%;
+    text-align: center;
+    margin: 20px 0;
+}
+
 html {
     height: 100%;
 }
 
 body {
+    /* vh betyder view height. Her sige vi at indholdet som minimum skal fylde skærmens højde */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    /* browseren har noget margin som udgangspunkt. Det fjerner vi */
     margin: 0;
+
+    /* Sæt generel font */
     font-family: opensans, sans-serif;
     background-color: #efeded;
 }
@@ -164,22 +183,18 @@ button {
     position: absolute;
 }
 
-#navtopImage {
-    width: 100%;
-}
-#navtopImage2,
-#navtopImage3 {
-    width: 100%;
-    display: none;
-}
+/***********************************************/
+/*************** mobil topbar ******************/
 
+/*Tilpasning af logo i toppen på mobil*/
 #logoTop {
     width: 60%;
     margin-top: 30px;
 }
 
-/***********************************************/
-/*************** mobil topbar ******************/
+#logoTop img {
+    width: 100%;
+}
 
 header {
     display: flex;
@@ -207,17 +222,6 @@ header {
     font-weight: 400;
 }
 
-/*Tilpasning af logo i toppen på mobil*/
-
-#logoTop img,
-#logoTopDesktop img {
-    width: 100%;
-}
-
-#menuPunkter #logoTopDesktop {
-    display: none;
-}
-
 /*Jeg styler mit bülow logo som ligger i bunden af navbaren*/
 #lblogo {
     display: flex;
@@ -230,21 +234,20 @@ header {
     width: 25%;
 }
 
+/* vores store billede i headeren. 2 og 3 er tablet og desktop */
+#navtopImage,
+#navtopImage2,
+#navtopImage3 {
+    width: 100%;
+}
+
+#navtopImage2,
+#navtopImage3 {
+    display: none;
+}
+
 /***********************************************/
 /************* mobil landingpage ***************/
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-main p {
-    width: 85%;
-    text-align: center;
-    margin: 20px 0;
-}
-
 .product {
     width: 90%;
     display: flex;
@@ -336,6 +339,7 @@ textarea {
     padding: 12px;
     margin: 18px 0;
     width: 100%;
+    /* vi bliver nødt til at overskrive fonten direkte her selvom vi har sat den på body allerede */
     font-family: opensans, sans-serif;
 }
 
@@ -397,7 +401,8 @@ textarea {
         width: 40%;
     }
 
-    #navtopImage, #navtopImage3 {
+    #navtopImage,
+    #navtopImage3 {
         display: none;
     }
     #navtopImage2 {
