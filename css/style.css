@@ -55,6 +55,11 @@ button {
 #logoFooter img {
     width: 100%;
 }
+
+.link-bulow {
+    text-decoration: none;
+    color: white;
+}
 /***********************************************/
 /***************** mobil nav *******************/
 
