@@ -325,7 +325,7 @@ header {
     margin: 40px 0px;
 }
 
-#formFields {
+.formFields {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -551,7 +551,7 @@ textarea {
         margin-top: 0;
     }
 
-    #formFields {
+    .formFields {
         justify-content: flex-start;
         margin-left: 30px;
     }
