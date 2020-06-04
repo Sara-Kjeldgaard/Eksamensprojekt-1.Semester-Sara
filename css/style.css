@@ -68,11 +68,9 @@ button {
     font-family: opensans, sans-serif;
 }
 
-#logoFooter {
-    width: 20%;
-}
+
 #logoFooter img {
-    width: 100%;
+    width: 70px;
 }
 
 .link-bulow {
@@ -438,6 +436,8 @@ textarea {
         width: 80vw;
         font-size: 18px;
     }
+    
+  
 }
 
 /***********************************************/
